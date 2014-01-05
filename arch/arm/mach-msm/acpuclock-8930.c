@@ -22,6 +22,7 @@
 #include "acpuclock-krait.h"
 
 /* Corner type vreg VDD values */
+#define DISABLE_MSM8230_LITE
 #define LVL_NONE	RPM_VREG_CORNER_NONE
 #define LVL_LOW		RPM_VREG_CORNER_LOW
 #define LVL_NOM		RPM_VREG_CORNER_NOMINAL
