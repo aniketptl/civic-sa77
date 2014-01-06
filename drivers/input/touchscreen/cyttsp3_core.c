@@ -59,10 +59,10 @@
 
 /* maximum number of concurrent tracks */
 #ifdef CY_USE_GEN2
-#define CY_NUM_TCH_ID               2
+#define CY_NUM_TCH_ID               5
 #endif /* --CY_USE_GEN2 */
 #ifdef CY_USE_GEN3
-#define CY_NUM_TCH_ID               4
+#define CY_NUM_TCH_ID               6
 #endif /* --CY_USE_GEN3 */
 /* maximum number of track IDs */
 #define CY_NUM_TRK_ID               16
@@ -72,7 +72,7 @@
  * maximum number of touch reports with
  * current touches=0 before performing Driver reset
  */
-#define CY_MAX_NTCH                 100
+#define CY_MAX_NTCH                 150
 #endif /* --CY_USE_WATCHDOG */
 
 #define CY_NTCH                     0 /* lift off */
@@ -84,7 +84,7 @@
 #define CY_REG_OP_FEATURE           0x1F
 #define CY_REG_SI_START             0x17
 #define CY_REG_SI_END               0x1F
-#define CY_DELAY_DFLT               20 /* ms */
+#define CY_DELAY_DFLT               10 /* ms */
 #define CY_DELAY_MAX                (500/CY_DELAY_DFLT) /* half second */
 #define CY_HALF_SEC_TMO_MS          500
 //#define CY_HALF_SEC_TMO_MS          2000
@@ -416,6 +416,7 @@ struct cyttsp {
 #ifdef CONFIG_HAS_EARLYSUSPEND
 	struct early_suspend early_suspend;
 #endif
+
 #ifdef CY_USE_WATCHDOG
 	struct work_struct work;
 	struct timer_list timer;

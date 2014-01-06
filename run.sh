@@ -13,7 +13,7 @@ echo "Perform over the counter defconfig changes"
 echo " "
 make ARCH=arm CROSS_COMPILE=$TOOLCHAIN- ARM=arm menuconfig
 make ARCH=arm CROSS_COMPILE=$TOOLCHAIN- -j8
-if [ -a $KERNEL_DIR/arch/arm/boot/zImage ];
+if [ -a $KERNEL/arch/arm/boot/zImage ];
 then
 echo "Removing the old modules"
 echo " "

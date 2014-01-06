@@ -61,7 +61,7 @@
 /*---------------------  Static Classes  ----------------------------*/
 
 
-#define CY_I2C_DATA_SIZE  250
+#define CY_I2C_DATA_SIZE  300
 
 struct cyttsp_i2c {
 	struct cyttsp_bus_ops ops;
