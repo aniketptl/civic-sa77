@@ -83,7 +83,6 @@
 
 #include "sched.h"
 #include "../workqueue_sched.h"
-#include "../smpboot.h"
 
 #define CREATE_TRACE_POINTS
 #include <trace/events/sched.h>
@@ -2149,16 +2148,6 @@ unsigned long nr_iowait(void)
 
 	return sum;
 }
-
-unsigned long avg_nr_running(void)
- {
-   unsigned long i, sum = 0;
- 
-   for_each_online_cpu(i)
-     sum += cpu_rq(i)->ave_nr_running;
- 
-   return sum;
- }
 
 unsigned long nr_iowait_cpu(int cpu)
 {
@@ -7090,7 +7079,6 @@ void __init sched_init(void)
 	/* May be allocated at isolcpus cmdline parse time */
 	if (cpu_isolated_map == NULL)
 		zalloc_cpumask_var(&cpu_isolated_map, GFP_NOWAIT);
-	idle_thread_set_boot_cpu();
 #endif
 	init_sched_fair_class();
 
