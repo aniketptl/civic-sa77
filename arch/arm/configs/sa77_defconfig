@@ -562,3 +562,5 @@ CONFIG_CRC_CCITT=y
 # Qualcomm Atheros Prima WLAN module
 CONFIG_PRIMA_WLAN=m
 CONFIG_PRIMA_WLAN_LFR=y
+# PS-3 Controller Support
+CONFIG_HID_SONY_PS3_CTRL_BT=y
