@@ -4,8 +4,8 @@ echo "by Aniket Patil"
 echo "First cleaning your old source"
 sh clean.sh
 TOOLCHAIN="/home/aniket/toolchain/android_prebuilt_toolchains/arm-eabi-4.7/bin/arm-eabi"
-KERNEL="/home/aniket/Kernel/civic-sa77"
-MODULES="/home/aniket/modules"
+KERNEL="/home/aniket/Kernel-Current/civic-sa77"
+MODULES="/home/aniket/Kernel-Current/modules"
 echo "Creating defconfig"
 echo " "
 make ARCH=arm CROSS_COMPILE=$TOOLCHAIN- sa77_defconfig
